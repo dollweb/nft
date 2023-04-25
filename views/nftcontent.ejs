@@ -25,19 +25,3 @@ th,td { padding : 5px }
     <form method=post action="/comment?bid=<%=board.id%>&cid=<%=board.comments.length%>"><input type=text name=comment size=50><input type=submit value="댓글쓰기"></form>
 </body>
 </html>
-==========================================
-views/nftedit.html
-==========================================
-<body>
-    <h1><%=name%></h1>
-    <form method=post action='/edit?bid=<%=board.id%>'>
-    <table>
-    <tr><td>id</td><td><%=board.id%></td></tr>
-    <tr><td>title</td><td><input type="text" name=title value="<%=board.title%>" size=100></td></tr>
-    <tr><td>url</td><td><input type="text" name=url value="<%=board.url%>" size=160></td></tr>
-    <tr><td>image url</td><td><input type="text" name=imageUrl value="<%=board.imageUrl%>" size=100></td></tr>
-    <tr><td>content</td><td><textarea name=content cols=100><%=board.content%></textarea><br></td></tr>
-    <tr><td><input type="submit" value=수정></td><td></td></tr>
-    </table>
-    </form>
-</body>
