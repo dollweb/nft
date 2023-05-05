@@ -1,0 +1,21 @@
+<body>
+
+    <h1><%= name %></h1>
+
+    <table border=1  style="border-collapse:collapse">
+
+    <tr><th>id</th><th>Title</th><th>Content</th><th>likeCount</th><th>Date</th></tr>
+
+    <% boards.forEach(function(list){ %>
+
+        <tr><td><%=list.id%></td></td><td><a href="/content?bid=<%=list.id%>"><%=list.title%></a></td><td><%=list.contents%></td>
+
+         <td><%=list.likeCount%></td><td><%=(list.createdAt).toLocaleString("ko-KR", {timeZone: "Asia/Seoul"})%></td></tr>
+
+    <% }) %>
+
+    </table>
+
+    <a href="board.html">Board 추가</a>
+
+</body>
